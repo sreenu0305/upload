@@ -1,0 +1,15 @@
+{% for message in messages %}
+{{message}}
+{% endfor %}
+
+<h2>Please Upload csv file</h2>
+<form action="/data/upload/" method="post" enctype="multipart/form-data">
+    {% csrf_token%}
+   <b>File :</b> <input type="file" name="myfile"><br>
+    <input type="submit" value="Upload">
+
+
+
+</form>
+
+<a href="/data/all_list/">Total List</a>
